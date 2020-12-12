@@ -1,5 +1,10 @@
 package ua.edu.ucu.stream;
-import ua.edu.ucu.function.*;
+import ua.edu.ucu.function.IntBinaryOperator;
+import ua.edu.ucu.function.IntConsumer;
+import ua.edu.ucu.function.IntPredicate;
+import ua.edu.ucu.function.IntToIntStreamFunction;
+import ua.edu.ucu.function.IntUnaryOperator;
+
 
 import java.util.Arrays;
 
@@ -21,7 +26,7 @@ public class AsIntStream implements IntStream {
             throw new IllegalArgumentException();
         }
         int sum = sum();
-        return (double) (sum/stream.length);
+        return (double) (sum/ (double) stream.length);
     }
 
     @Override
